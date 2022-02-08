@@ -1,0 +1,34 @@
+{
+  "name": "simple-test",
+  "version": "1.0.0",
+  "main": "main.js",
+  "description": "simple-test",
+  "author": "Bomee Hwang",
+  "scripts": {
+    "publish": "electron-builder --win -p always"
+  },
+  "devDependencies": {
+    "electron": "^14.0.1",
+    "electron-builder": "^22.11.7"
+  },
+  "dependencies": {
+    "electron-log": "^4.4.1",
+    "electron-updater": "^4.3.9"
+  },
+  "build": {
+    "appId": "com.github.i33w.simpletest",
+    "publish": [
+      {
+        "provider": "github",
+        "owner": "i33w",
+        "repo": "simple-test"
+      }
+    ],
+    "win": {
+      "target": "nsis"
+    },
+    "nsis": {
+      "oneClick": false
+    }
+  }
+}
